@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@+id/navigation_store">
+
+    <fragment
+        android:id="@+id/navigation_store"
+        android:name="com.example.sergiocabifychallange.presentation.view.fragment.StoreItemsFragment"
+        tools:layout="@layout/fragment_store_items" >
+
+        <action
+            android:id="@+id/action_navigation_store_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.example.sergiocabifychallange.presentation.view.fragment.ProductDetailFragment"
+        android:label="ProductDetailFragment"
+        tools:layout="@layout/fragment_product_detail">
+        <argument
+            android:name="productCode"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SergioCabifyChallange</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="network_access_error">Connection error, please check your network access</string>
+    <string name="server_error">Sorry, an unknown error happened</string>
+    <string name="cancel">Cancel</string>
+    <string name="no_data">No data to show</string>
+    <string name="come_back_soon">Come back soon!</string>
+    <string name="discount_title_discount_by_amount">Buy %1$d and get %2$d\%% off</string>
+    <string name="discount_title_take_x_get_y">Buy %1$d and get %2$d more free</string>
+    <string name="total">Total</string>
+    <string name="promo">Promotion</string>
+</resources>
