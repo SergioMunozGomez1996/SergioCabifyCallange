@@ -11,9 +11,7 @@ class CabifyRepository @Inject constructor(
 
     suspend fun getProductsFromApi() = api.getProducts()
 
-    suspend fun getCartProductsFromPreferences() = preferenceManager.loadLocalCart()
-    suspend fun addProductToChartToPreferences(productCode: String) =
-        preferenceManager.addProductToCart(productCode)
+    fun getCartProductsFromPreferences() = preferenceManager.loadLocalCart()
     suspend fun addProductsToChartToPreferences(productCode: String, quantity: Int) =
         preferenceManager.addProductsToCart(productCode, quantity)
     suspend fun removeProductFromChartFromPreferences(productCode: String) =
