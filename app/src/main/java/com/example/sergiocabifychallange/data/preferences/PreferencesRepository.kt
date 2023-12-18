@@ -22,14 +22,6 @@ class PreferencesRepository @Inject constructor(
         }
     }
 
-    suspend fun addProductToCart(productCode: String) {
-        dataStore.edit {
-            val currentList: List<String> =
-                it[PreferencesKeys.KEY_CART]?.let { json -> gson.fromJson(json, typeAdapter) } ?: emptyList()
-            it[PreferencesKeys.KEY_CART] = gson.toJson(currentList.toMutableList().apply { add(productCode) })
-        }
-    }
-
     suspend fun addProductsToCart(productCode: String, quantity: Int) {
         dataStore.edit {
             val currentList: List<String> =
