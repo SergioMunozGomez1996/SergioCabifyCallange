@@ -45,9 +45,19 @@ class StoreItemsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        initView()
         initRecyclerView()
         storeItemsViewModel.getStoreItemsWithDiscount()
 
+    }
+
+    private fun initView(){
+        binding.apply {
+            cartButton.setOnClickListener {
+                findNavController().navigate(StoreItemsFragmentDirections
+                    .actionNavigationStoreToCartFragment())
+            }
+        }
     }
 
     private fun initRecyclerView(){

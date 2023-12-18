@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-        mainActivityViewModel.getCartListItem()
+        mainActivityViewModel.getCartListPrice()
     }
 
 

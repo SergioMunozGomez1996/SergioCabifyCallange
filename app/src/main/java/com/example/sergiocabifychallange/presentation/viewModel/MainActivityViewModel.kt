@@ -19,7 +19,7 @@ class MainActivityViewModel @Inject constructor(
     private val _cartPrice = MutableSharedFlow<Double>()
     val cartPrice = _cartPrice.asSharedFlow()
 
-    fun getCartListItem(){
+    fun getCartListPrice(){
         viewModelScope.launch {
             getCartListUseCase().collect{
                 it.let { _cartPrice.emit(getCartPriceUseCase(it)) }

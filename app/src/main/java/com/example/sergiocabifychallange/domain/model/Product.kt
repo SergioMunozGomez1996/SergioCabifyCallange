@@ -6,11 +6,10 @@ data class Product(
     val code: String,
     val name: String,
     val price: Double,
-    val currencyCode: String,
     val imageUrl: String
 )
 
-fun ProductModel.toDomainLayerType() =  Product(code, name, price, "EUR", getFakeImageUrl(code))
+fun ProductModel.toDomainLayerType() =  Product(code, name, price, getFakeImageUrl(code))
 
 fun getFakeImageUrl(code: String) : String {
     return when(code) {
