@@ -13,8 +13,7 @@ Para resolver los requisitos de este reto los he separado en 3 funcionalidades:
 
 
 ## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+<img src="https://github.com/SergioMunozGomez1996/SergioCabifyCallange/blob/master/screenshots/Store_Screenshot.png?raw=true" width="300"> <img src="https://github.com/SergioMunozGomez1996/SergioCabifyCallange/blob/master/screenshots/Item_Details_Screenshot.png?raw=true" width="300"> <img src="https://github.com/SergioMunozGomez1996/SergioCabifyCallange/blob/master/screenshots/Cart_Screenshot.png?raw=true" width="300">
 
 
 ## Architecture
@@ -27,7 +26,7 @@ Todo el proyecto está siguiendo patrones de diseño para asegurar las buenas pr
 Para la comuncación más eficiente entre las diferentes capas se incluye la injección de dependencia.
 
 #### MVVM
-Como arquitectura propia de android he decidido usar la recomentada MVVM ya que nos proporcina una buena independencia y a la vez una buena integración de programación reactiva
+Como arquitectura propia de android he decidido usar la recomentada MVVM ya que nos proporcina una buena independencia y a la vez una buena integración de programación reactiva. He utilizado esta arquitectura porque es con la que más he trabajado, aunque otra arquitectura interesante hubiera sido MVI ya que es una evolución de MVVM unificando estados, además de que es muy útil para el uso con Compose.
 
 #### Componentes de vistas y navegación
 Debido a que este proyecto es una exposición de mi experiencia, he optado por utilizar de manera genérica el componente estandarizado **XML con binding** para el diseño de las vistas. Aunque para demostrar mis conocimientos de **Compose**, he decidido crear la vista del carrito usando esta tecnología e integrarla con la anterior.
