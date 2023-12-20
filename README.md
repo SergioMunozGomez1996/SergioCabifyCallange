@@ -16,7 +16,7 @@ Para resolver los requisitos de este reto los he separado en 3 funcionalidades:
 <img src="https://github.com/SergioMunozGomez1996/SergioCabifyCallange/blob/master/screenshots/Store_Screenshot.png?raw=true" width="200"> <img src="https://github.com/SergioMunozGomez1996/SergioCabifyCallange/blob/master/screenshots/Item_Details_Screenshot.png?raw=true" width="200"> <img src="https://github.com/SergioMunozGomez1996/SergioCabifyCallange/blob/master/screenshots/Cart_Screenshot.png?raw=true" width="200">
 
 
-## Architecture
+## Arquitectura
 Todo el proyecto está siguiendo patrones de diseño para asegurar las buenas prácticas como **Clean Architecture** para separar las diferentes funcionalidades de la aplicación en capas independientes:
 
 - **Presentación**: Capa que representa todo lo relacionado con la gestión de las vistas, los viewmodels para la comuncación con otras capas y, en definitiva, todo lo que tenga que ver con los componentes propios de, en este caso, android.
@@ -32,8 +32,8 @@ Como arquitectura propia de android he decidido usar la recomentada MVVM ya que 
 Debido a que este proyecto es una exposición de mi experiencia, he optado por utilizar de manera genérica el componente estandarizado **XML con binding** para el diseño de las vistas. Aunque para demostrar mis conocimientos de **Compose**, he decidido crear la vista del carrito usando esta tecnología e integrarla con la anterior.
 
 Repescto al tema de la navegación he decidido utilizar el componente **navigation** que proporciona android ya que integra muy bien el uso de los fragments clásicos y permite tener, de una manera muy sencilla, un buen control de la navegación gracias a su grafos.
-## Tests
 
+## Tests
 Otra de las partes importantes para el desarrollo de una app es la creación de una pila de test para comprobar de una forma más rápida y sencilla el correcto comportamiento de la app.
 
 Debido a que este proyecto es una prueba no están realizados todos los tests que se podrían incluir pero sí que he realizado varios test unitarios para probar diferentes funcionalidades de un caso de uso y de un viewModel.
