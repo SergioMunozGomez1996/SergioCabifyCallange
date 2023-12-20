@@ -13,7 +13,7 @@ Para resolver los requisitos de este reto los he separado en 3 funcionalidades:
 
 
 ## Screenshots
-<img src="https://github.com/SergioMunozGomez1996/SergioCabifyCallange/blob/master/screenshots/Store_Screenshot.png?raw=true" width="300"> <img src="https://github.com/SergioMunozGomez1996/SergioCabifyCallange/blob/master/screenshots/Item_Details_Screenshot.png?raw=true" width="300"> <img src="https://github.com/SergioMunozGomez1996/SergioCabifyCallange/blob/master/screenshots/Cart_Screenshot.png?raw=true" width="300">
+<img src="https://github.com/SergioMunozGomez1996/SergioCabifyCallange/blob/master/screenshots/Store_Screenshot.png?raw=true" width="200"> <img src="https://github.com/SergioMunozGomez1996/SergioCabifyCallange/blob/master/screenshots/Item_Details_Screenshot.png?raw=true" width="200"> <img src="https://github.com/SergioMunozGomez1996/SergioCabifyCallange/blob/master/screenshots/Cart_Screenshot.png?raw=true" width="200">
 
 
 ## Architecture
