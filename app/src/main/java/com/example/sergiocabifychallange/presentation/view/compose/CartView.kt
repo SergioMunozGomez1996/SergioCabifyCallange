@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.FabPosition
 import androidx.compose.material.FloatingActionButton
@@ -49,7 +50,7 @@ fun CartView(
                 FloatingActionButton(
                     onClick = { /* Handle FAB click */ },
                 ) {
-                    Icon(Icons.Outlined.Payment, contentDescription = "Add")
+                    Icon(Icons.Outlined.Payment, contentDescription = "Payment")
                 }
 
         },
@@ -58,13 +59,11 @@ fun CartView(
 
         Column(
             Modifier
+                .padding(8.dp)
                 .verticalScroll(rememberScrollState())
         ) {
 
-            Column(
-                Modifier
-                    .padding(8.dp)
-            ) {
+
                 cartItems.forEach { item ->
                     CartItemView(
                         item = item,
@@ -72,7 +71,7 @@ fun CartView(
                         addOneItem = { addOneItem(it)}
                     )
                 }
-            }
+
         }
     }
 }
@@ -98,7 +97,7 @@ fun CartItemView(
             contentScale = ContentScale.Crop,
             contentDescription = null
         )
-        Spacer(modifier = Modifier.width(16.dp))
+        Spacer(modifier = Modifier.width(8.dp))
         Icon(
             modifier = Modifier
                 .size(24.dp)
@@ -106,10 +105,11 @@ fun CartItemView(
             imageVector = Icons.Outlined.Remove,
             contentDescription = null
         )
+        Spacer(modifier = Modifier.width(8.dp))
         Box(
             modifier = Modifier
                 .size(32.dp)
-                .clip(MaterialTheme.shapes.large)
+                .clip(CircleShape)
                 .background(MaterialTheme.colors.primary),
             contentAlignment = Alignment.Center
         ) {
@@ -119,6 +119,7 @@ fun CartItemView(
                 style = MaterialTheme.typography.body2
             )
         }
+        Spacer(modifier = Modifier.width(8.dp))
         Icon(
             modifier = Modifier
                 .size(24.dp)
@@ -126,7 +127,7 @@ fun CartItemView(
             imageVector = Icons.Outlined.Add,
             contentDescription = null
         )
-        Spacer(modifier = Modifier.width(16.dp))
+        Spacer(modifier = Modifier.width(8.dp))
         Text(
             text = item.product.name,
             style = MaterialTheme.typography.body1
@@ -166,7 +167,7 @@ fun CartViewPreview() {
                 code = "VOUCHER",
                 name = "Cabify Voucher",
                 price = 5.0,
-                imageUrl = "https://images.unsplash.com/photo-1549465220-1a8b9238cd48"
+                imageUrl = "https://cdn.ecommercedns.uk/files/9/255879/0/31890820/10.jpg"
             ),
             quantity = 1,
             discount = null,

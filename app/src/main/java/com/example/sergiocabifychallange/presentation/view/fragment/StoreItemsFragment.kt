@@ -1,11 +1,11 @@
 package com.example.sergiocabifychallange.presentation.view.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -16,11 +16,13 @@ import com.example.sergiocabifychallange.R
 import com.example.sergiocabifychallange.data.network.NetworkResponse
 import com.example.sergiocabifychallange.databinding.FragmentStoreItemsBinding
 import com.example.sergiocabifychallange.domain.model.Product
+import com.example.sergiocabifychallange.presentation.adapter.AdaptiveSpacingItemDecoration
 import com.example.sergiocabifychallange.presentation.adapter.store.StoreAdapter
 import com.example.sergiocabifychallange.presentation.viewModel.StoreItemsViewModel
 import com.example.sergiocabifychallange.utils.prepareNetworkErrorAction
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+
 
 @AndroidEntryPoint
 class StoreItemsFragment : Fragment() {
@@ -62,6 +64,13 @@ class StoreItemsFragment : Fragment() {
 
     private fun initRecyclerView(){
 
+        binding.rcyProducts.layoutManager =
+            GridLayoutManager(context, 2)
+
+        val spacingInPixels =
+            resources.getDimensionPixelSize(R.dimen.spacing16)
+        binding.rcyProducts.addItemDecoration( AdaptiveSpacingItemDecoration(spacingInPixels))
+
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 storeItemsViewModel.networkResponse.collect { response ->
@@ -75,8 +84,7 @@ class StoreItemsFragment : Fragment() {
                                 binding.emptyView.visibility = View.VISIBLE
                             } else {
                                 binding.emptyView.visibility = View.GONE
-                                binding.rcyProducts.layoutManager =
-                                    GridLayoutManager(context, 2)
+
                                 binding.rcyProducts.adapter =
                                     StoreAdapter(response.data) { product ->
                                         onItemSelected(product)

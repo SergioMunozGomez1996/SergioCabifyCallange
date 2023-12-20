@@ -11,6 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.example.sergiocabifychallange.databinding.FragmentCartBinding
 import com.example.sergiocabifychallange.presentation.view.compose.CartView
+import com.example.sergiocabifychallange.presentation.view.compose.ui.theme.SergioCabifyChallangeTheme
 import com.example.sergiocabifychallange.presentation.viewModel.CartViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -46,15 +47,17 @@ class CartFragment : Fragment() {
                 cartViewModel.cartState.collect {
                     binding.apply {
                         cartComposeView.setContent {
-                            CartView(
-                                cartItems = it.cartItems,
-                                removeOneItem = {
-                                    cartViewModel.removeProductFromCart(it)
-                                },
-                                addOneItem = {
-                                    cartViewModel.addProductToCart(it)
-                                }
-                            )
+                            SergioCabifyChallangeTheme {
+                                CartView(
+                                    cartItems = it.cartItems,
+                                    removeOneItem = {
+                                        cartViewModel.removeProductFromCart(it)
+                                    },
+                                    addOneItem = {
+                                        cartViewModel.addProductToCart(it)
+                                    }
+                                )
+                            }
                         }
                     }
                 }
